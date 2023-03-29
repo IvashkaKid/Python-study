@@ -1,4 +1,4 @@
-string = str(input())
+string = str(input("Введите строку: "))
 
 count = 0
 
