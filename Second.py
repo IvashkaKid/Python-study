@@ -4,21 +4,22 @@ while True:
     count = 0
     letter = "с"
     waring = 0
+    length = len(string)
 
     for i in string:
         count += 1
     
         if count == 3:
-            print("Третий символ пропущен")
-            continue
+                print(count,")","Третий символ пропущен")
+                continue
     
         if i == letter:
             waring += 1
         
-        if len(string) != count:
-            print(i)
+        if length != count:
+            print(count,")",i)
         else:
-            print("Последний символ не выведен\n")
+            print(count,")","")
         
     if waring != 0:
         print("В строке встретился символ: ", letter)
