@@ -1,17 +1,26 @@
-string = str(input("Введите строку: "))
+while True:
+    string = str(input("Введите строку: "))
 
-count = 0
+    count = 0
+    letter = "с"
+    waring = 0
 
-for i in string:
-    count += 1
+    for i in string:
+        count += 1
     
-    if count == 3:
-        continue
+        if count == 3:
+            print("Третий символ пропущен")
+            continue
     
-    if i == "с":
-        print("В строке встретился символ", i)
+        if i == letter:
+            waring += 1
         
-    if len(string) != count:
-        print(i)
+        if len(string) != count:
+            print(i)
+        else:
+            print("Последний символ не выведен\n")
+        
+    if waring != 0:
+        print("В строке встретился символ: ", letter)
 
-print("Длинна строки:",count)
+    print("Длинна строки:",count,"\n")
